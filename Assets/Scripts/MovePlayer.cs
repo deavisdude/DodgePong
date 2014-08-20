@@ -14,7 +14,7 @@ public class MovePlayer : MonoBehaviour {
 
 	void Start(){
 		normalScale = this.transform.localScale;
-		crouchingScale = new Vector3(this.transform.localScale.x,(this.transform.localScale.y)*0.5f, this.transform.localScale.z);
+		crouchingScale = new Vector3(this.transform.localScale.x*0.5f,(this.transform.localScale.y)*0.5f, this.transform.localScale.z);
 	}
 
 	void Update () {
@@ -22,7 +22,7 @@ public class MovePlayer : MonoBehaviour {
 		transform.position += (Vector3) acc;
 		acc= new Vector2();
 
-		if(Input.GetButtonDown("Jump") && transform.position.y < -3.7){
+		if(Input.GetButtonDown("Jump") && transform.position.y < -3.45){
 			rigidbody2D.AddForce(new Vector2(0, jumpPower));
 		}
 
