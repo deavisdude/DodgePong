@@ -16,6 +16,7 @@ public class SpawnManager : MonoBehaviour {
 		if(GameObject.Find("Player") != null){
 			NewFruit = (GameObject) Instantiate(fruit, Camera.main.ViewportToWorldPoint(new Vector3(Random.value, Random.Range(.5f, 1f), 10)), transform.rotation);
 			NewFruit.rigidbody2D.AddForce((NewFruit.transform.position - player.transform.position)*speed);
+			ScoreKeeper.ScoreScale*=2;
 		}
 	}
 }

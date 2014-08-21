@@ -206,7 +206,7 @@ ParticleSystem:
         rgba: 0
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: .400000006
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -271,9 +271,9 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: 0
+    gravityModifier: 1
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -921,9 +921,9 @@ ParticleSystem:
       minMaxState: 1
     range: {x: 0, y: 1}
   RotationBySpeedModule:
-    enabled: 0
+    enabled: 1
     curve:
-      scalar: .785398185
+      scalar: 1.22173047
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1093,7 +1093,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5c8318c573268fc40af6acf936f16f36, type: 2}
+  - {fileID: 2100000, guid: 4a7edb319df405d4fa61c4abc8097844, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
