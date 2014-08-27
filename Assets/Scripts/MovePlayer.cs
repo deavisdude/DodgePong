@@ -33,19 +33,18 @@ public class MovePlayer : MonoBehaviour {
 				rigidbody2D.AddForce(new Vector2(0, jumpPower));
 			}
 		}
-
-		transform.position += (Vector3) acc;
-		acc= new Vector2();
-
 	
 		if(Input.GetButton("Crouch")){
 			transform.localScale = crouchingScale;
+			acc*=0.63f;
 		}else{
 			transform.localScale = normalScale;
 			if(Input.GetButtonDown("Jump") && rigidbody2D.velocity.y == 0){
 				rigidbody2D.AddForce(new Vector2(0, jumpPower));
 			}
 		}
+		transform.position += (Vector3) acc;
+		acc= new Vector2();
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
