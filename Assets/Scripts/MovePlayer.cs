@@ -18,7 +18,7 @@ public class MovePlayer : MonoBehaviour {
 	}
 
 	void Update () {
-		//acc = new Vector2(speed*Input.GetAxis("Horizontal")*Time.deltaTime, 0);
+		acc = new Vector2(speed*Input.GetAxis("Horizontal")*Time.deltaTime, 0);
 		for(int i=0; i<Input.touchCount; i++){
 			Touch touch = Input.GetTouch(i);
 			if(touch.phase != TouchPhase.Ended){
