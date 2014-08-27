@@ -22,21 +22,7 @@ public class MovePlayer : MonoBehaviour {
 
 	void Update () {
 		acc = new Vector2(speed*Input.GetAxis("Horizontal")*Time.deltaTime, 0);
-		for(int i=0; i<Input.touchCount; i++){
-			Touch touch = Input.GetTouch(i);
-			if(touch.phase != TouchPhase.Ended){
-				if(touch.position.x > 400){
-					acc = new Vector2(speed*Time.deltaTime, 0);
-				}else if(touch.position.x <200){
-					acc = new Vector2(-speed*Time.deltaTime, 0);
-				}
-			}
-
-			if(touch.phase == TouchPhase.Moved && touch.deltaPosition.y > 20 && rigidbody2D.velocity.y == 0){
-				rigidbody2D.AddForce(new Vector2(0, jumpPower));
-			}
-		}
-	
+ 
 		if(Input.GetButton("Crouch")){
 			transform.localScale = crouchingScale;
 			acc*=0.63f;
