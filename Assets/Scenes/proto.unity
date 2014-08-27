@@ -367,7 +367,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exPrefab: {fileID: 100000, guid: b7c59794e0ec64843b6570aa5445aeac, type: 2}
   speed: 5
-  jumpPower: 400
+  jumpPower: 450
 --- !u!1 &1609995703
 GameObject:
   m_ObjectHideFlags: 0
