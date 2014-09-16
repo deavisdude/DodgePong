@@ -434,8 +434,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exPrefab: {fileID: 100000, guid: b7c59794e0ec64843b6570aa5445aeac, type: 2}
+  crouching: 0
   speed: 5
   jumpPower: 450
+--- !u!1 &1605548594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1605548596}
+  - 131: {fileID: 1605548595}
+  - 114: {fileID: 1605548597}
+  m_Layer: 0
+  m_Name: CrouchButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!131 &1605548595
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605548594}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: a72238fb565c0d2418dd6beec17283d3, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .427450985}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 29.4799995
+    y: -22.3299999
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &1605548596
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605548594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .74000001, y: .189999998, z: -.129638672}
+  m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+--- !u!114 &1605548597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605548594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bc3c1293b9b3f48984995c50ab93bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touch2Watch: 64
+  pressed: 0
 --- !u!1 &1609995703
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +561,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1633507399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1633507402}
+  - 131: {fileID: 1633507401}
+  - 114: {fileID: 1633507400}
+  m_Layer: 0
+  m_Name: JumpButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1633507400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633507399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e446be4c480e44eae00edfb711c8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touch2Watch: 64
+--- !u!131 &1633507401
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633507399}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: a72238fb565c0d2418dd6beec17283d3, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .427450985}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 24.5900002
+    y: -1.03999996
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &1633507402
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633507399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .879999995, y: .25999999, z: -.129638672}
+  m_LocalScale: {x: .0900000036, y: .159999996, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1843431680
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,11 +629,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1843431683}
-  - 131: {fileID: 1843431682}
   - 114: {fileID: 1843431681}
   m_Layer: 0
   m_Name: Joystick
-  m_TagString: Untagged
+  m_TagString: joystick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,39 +645,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1843431680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb10c595af974ea6ba0313a749d5c55, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c721864037c80c478a6e50b5f153fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchPad: 0
-  touchZone:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  deadZone: {x: 0, y: 0}
-  normalize: 0
-  position: {x: 0, y: 0}
-  tapCount: 0
---- !u!131 &1843431682
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1843431680}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: ab5bb3eb247a4492fa9900f6ac0db050, type: 3}
-  m_Color: {r: .5, g: .5, b: .5, a: .392156869}
-  m_PixelInset:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
+  activeColor: {r: .617647052, g: .617647052, b: .617647052, a: 1}
+  inactiveColor: {r: .411764681, g: .411764681, b: .411764681, a: .470588237}
+  joystick2D: {fileID: 2800000, guid: a72238fb565c0d2418dd6beec17283d3, type: 3}
+  background2D: {fileID: 2800000, guid: ab5bb3eb247a4492fa9900f6ac0db050, type: 3}
 --- !u!4 &1843431683
 Transform:
   m_ObjectHideFlags: 0
@@ -564,8 +659,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1843431680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .119999997, y: .180000007, z: 7}
-  m_LocalScale: {x: .170000002, y: .289999992, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8

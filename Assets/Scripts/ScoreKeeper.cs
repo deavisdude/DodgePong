@@ -21,7 +21,7 @@ public class ScoreKeeper : MonoBehaviour {
 			GameObject.FindGameObjectWithTag("scoreboard").guiText.text = "Final Score: "+((int)score).ToString();
 			PlayerPrefs.SetFloat("highscore", highscore);
 			GameObject.Find("RestartPrompt").guiText.enabled = true;
-			if(Input.GetKeyDown(KeyCode.R)){
+			if(Joystick.VJRdoubleTap){
 				Application.LoadLevel("proto");
 				GameObject.Find("RestartPrompt").guiText.enabled = false;
 				ScoreScale = 1;
