@@ -2,14 +2,10 @@
 using System.Collections;
 
 public class FontScaler : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void Start () 
+	{
+		GUIText text = GetComponent<GUIText>();
+		text.fontSize = Screen.height / 20;
 	}
 }
