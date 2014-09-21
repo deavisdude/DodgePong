@@ -20,7 +20,7 @@ public class CrouchButton : TouchLogicV2 {
 	}
 
 	public override void OnTouchBegan(){
-		MovePlayer move = (MovePlayer) GameObject.Find("Player").GetComponent(typeof(MovePlayer));
+		//MovePlayer move = (MovePlayer) GameObject.Find("Player").GetComponent(typeof(MovePlayer));
 		//move.crouching = true;
 		pressed = true;
 	}
