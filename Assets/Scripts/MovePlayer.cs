@@ -36,17 +36,21 @@ public class MovePlayer : MonoBehaviour {
 		leftRotation = new Quaternion(transform.localRotation.x, 180f, transform.localRotation.z, transform.localRotation.w);
 	}
 
+	float prevX;
+	float XVelocity = 0;
+
 	void Update () {
+		prevX = transform.position.x;
+
 		acc = new Vector2(speed*Joystick.VJRnormals.x*Time.deltaTime, 0f);
 		//acc = new Vector2(speed*Input.GetAxis("Horizontal")*Time.deltaTime, 0);
 
-
-
-		if(rigidbody2D.velocity.x < 0){
-			transform.localRotation = leftRotation;
+		if(XVelocity != 0){
+			anim.SetBool("Running", true);
 		}else{
-			transform.localRotation = rightRotation;
+			anim.SetBool("Running", false);
 		}
+
  		
 		//CrouchButton cb = (CrouchButton) GameObject.Find("Player").GetComponent(typeof(CrouchButton));
 
@@ -71,6 +75,14 @@ public class MovePlayer : MonoBehaviour {
 
 		transform.position += (Vector3) acc;
 		acc= new Vector2();
+
+		XVelocity = (transform.position.x - prevX)/Time.deltaTime;
+
+		if(XVelocity < 0){
+			transform.rotation = new Quaternion(0f,180f,0f,0f);
+		}else if(XVelocity > 0){
+			transform.rotation = new Quaternion(0f,0f,0f,0f);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
