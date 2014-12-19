@@ -28,6 +28,7 @@ public class FruitPilot : MonoBehaviour {
 				rigidbody2D.AddForce(new Vector2(0, adjust));
 			}
 		}
+		rigidbody2D.angularVelocity += GameObject.Find("Player").rigidbody2D.velocity.y*10;
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
