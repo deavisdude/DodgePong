@@ -6,6 +6,8 @@ public class CamShakeSimple : MonoBehaviour {
 	Vector3 originalCameraPosition;
 	
 	float shakeAmt = 0;
+
+	public GameObject spark;
 	
 	Camera mainCamera = Camera.main;
 
@@ -19,7 +21,7 @@ public class CamShakeSimple : MonoBehaviour {
 		shakeAmt = coll.relativeVelocity.magnitude * .0025f;
 		InvokeRepeating("CameraShake", 0, .01f);
 		Invoke("StopShaking", 0.3f);
-		
+		Instantiate(spark,transform.position,transform.rotation);
 	}
 	
 	void CameraShake()
